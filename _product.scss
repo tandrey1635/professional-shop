@@ -1,0 +1,182 @@
+.slider {
+	position: relative;
+	background: $productPromoBg;
+	&__wrapper {
+		height: 800px;
+		animation: rotate-vert-center 5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+	}
+
+	&__inner{
+		height: inherit;
+	}
+
+	&__photo{
+		object-fit: contain;
+	}
+
+	&__navigations{
+		&__prev, &__next{
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 40%;
+			width: 50px;
+			height: 50px;
+			fill: $mainColor;
+			border: 3px solid $hrBorder;
+		}
+
+		&__prev{
+			left: 5%;
+		}
+
+		&__next{
+			right: 5%;
+		}
+
+		&__prev__img, &__next__img{
+			width: 75%;
+			height: 75%;
+		}
+
+		&__prev__img:hover, &__next__img:hover{
+			fill: $secondColor;
+			cursor: pointer;
+		}
+	}
+
+	/* animation rotate-vert-center */
+	@keyframes rotate-vert-center {
+		0% {
+			transform: rotateY(0);
+		}
+		100% {
+			transform: rotateY(360deg);
+		}
+	}
+}
+
+.merchendise {
+	padding-bottom: 96px;
+	&__box {
+		padding: 64px 15px;
+		background: $defaultBg;
+		min-height: 600px;
+		transform: translateY(-50px);
+		box-shadow: 0 0 10px  $mainShadow;
+	}
+
+	&__descriptions {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__header {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $secondColor;
+		text-transform: uppercase;
+	}
+
+	&__hr {
+		margin: 12px 0;
+		width: 64px;
+		border: 3px solid $secondBorder;
+	}
+
+	&__heading {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 22px;
+		color: $mainColor;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		width: 555px;
+		margin-top: 48px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: $mainColor;
+	}
+
+	&__price {
+		margin-top: 32px;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 29px;
+		color: $secondColor;
+	}
+
+	&__hr_low {
+		width: 640px;
+		margin: 64px 0;
+		border: 1px solid $hrBorder;
+	}
+
+	&__sort {
+		display: flex;
+		justify-content: center;
+		&__menu{
+			display: flex;
+			justify-content: center;
+			gap: 28px;
+		}
+		&__list {
+			font-size: 14px;
+			line-height: 17px;
+			color: $mainColor;
+			text-transform: uppercase;
+			cursor: pointer;
+			&::after {
+				content: url('img/product/arrow.svg');
+				margin-left: 10px;
+			}
+		}	
+	}	
+
+	&__block__button {
+		width: 212px;
+		margin: 48px auto 0;
+		border: 1px solid $secondBorder;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__button {
+		padding: 15px 5px;
+		padding-left: 20px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		color: $secondColor;
+		text-align: center;
+		transition: 0.8s;
+		&__img{
+			width: 27px;
+			height: 25px;
+			position: absolute;
+			top: 12px;
+			left: 25px;
+			fill: $secondColor;
+		}
+		&:hover {
+			transition: 0.8s;
+			transform: scale(1.2);
+			background: $secondBg;
+			color: $defaultColor
+		}
+
+		&:hover .merchendise__button__img {
+			fill: $defaultColor;
+		}
+	}
+
+}

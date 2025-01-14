@@ -1,0 +1,668 @@
+/* Шрифт */
+$fontFamily: 'Lato', sans-serif;
+
+/* Цвет */
+$defaultColor: #fff;
+$mainColor: #222;
+$secondColor: #f16d7f;
+$thirdColor: #03a9f4; 
+$fourthColor: #009688;
+$productTextColor: #9f9f9f;
+$productHeadingColor: #009688;
+$productTextSecondColor: #ed143d;
+
+/* Фон */
+$defaultBg: #fff;
+$mainBg: #222;
+$secondBg: #f16d7f;
+$promoBg: #f1e4e6;
+$productPromoBg: #f7f7f7;
+$productItemsBg: #f8f8f8;
+$productItemsHoverBg: #d3d3d3;
+$productFilterBg: #ebebeb;
+$cartFormBg: #f5f3f3;
+$subscribeBg: #e1e1e1;
+$btnHover: #e05c6e;
+
+/* Бордер */
+$defaultBorder: #fff;
+$mainBorder: #222;
+$secondBorder: #f16d7f;
+$thirdBorder: #03a9f4; 
+$fourthBorder: #009688;
+$paginationBorder: #e5e5e5;
+$hrBorder: #eaeaea;
+
+/* Тень */
+$defaultShadow: #fff;
+$mainShadow: #000;
+
+*{
+  	margin: 0;
+  	padding: 0;
+	box-sizing: border-box;
+	border: 0;
+}
+
+body{
+	font-family: $fontFamily;
+}
+
+section{
+	min-height: 600px;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+}
+
+main{
+	flex: 1 0 auto;  
+    min-height: 100vh;
+}
+
+footer{
+	flex: 0 0 auto 
+}
+    
+
+
+a{
+	display: flex;
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+input{
+	outline: none;
+}
+
+button{
+	outline: none;
+	cursor: pointer;
+}
+
+.center{
+  	padding-left: calc(50% - 570px);
+  	padding-right: calc(50% - 570px);
+}
+
+
+.header{
+	position: relative;
+  	min-height: 75px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+  	background: $mainBg;
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+
+	&__left, &__right{
+		display: flex;
+  		justify-content: space-between;
+  		align-items: center;
+		gap: 35px;
+	}
+
+	&__logo{
+		width: 45px;
+		height: 38px;
+	}
+
+	&__search{
+		width: 28px;
+		height: 30px;
+	}
+
+	&__menu{
+		width: 32px;
+		height: 24px;
+		cursor: pointer;
+	}
+
+	&__account, &__trash{
+		width: 30px;
+		height: 30px;
+	}
+
+	&__popup{
+		padding: 15px 25px;
+		width: 200px;
+		height: 600px;
+		display: none;
+		position: absolute;
+		overflow-y: scroll;
+		top: 75px;
+		right: 0;
+		z-index: 10;
+		background: $defaultBg;
+		box-shadow: 6px 4px 35px $mainShadow;
+		&__close{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 16px;
+			height: 16px;
+			cursor: pointer;
+			&:hover{
+				fill: $secondColor;
+			  }
+		}
+	
+		&__img{
+			width: 100%;
+			height: 100%;
+			fill: $mainColor;
+		}
+
+		&__header{
+			font-size: 14px;
+			line-height: 17px;
+			color: $fourthColor;
+			margin-top: 20px;
+			text-transform: uppercase;
+			&_color{
+				color: $secondColor;
+			}
+		}
+	
+		&__menu{
+			margin-top: 16px;
+			margin-left: 16px;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+	
+		&__list, &__link{
+			color: $mainColor;
+			font-size: 14px;
+			line-height: 17px;
+			&:hover{
+				color: $thirdColor;
+			}
+		}
+
+		&__active{
+			display: block;
+		}
+	}	
+
+}
+
+.promo{
+	position: relative;
+	background: $promoBg;
+	display: flex;
+	padding-left: calc(50% - 800px);
+	padding-right: calc(50% - 800px);
+
+    &__img{
+		width: 50%;
+		display: flex;
+    }
+  
+    &__descriptions{
+      	width: 50%;
+    }
+
+    &__content{
+		margin-top: 40%;
+		border-left: 12px solid $secondBorder;
+		padding-left: 16px;
+		animation: text-pop-up-left 3.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    &__heading{
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 58px;
+		color: $mainColor;
+		text-transform: uppercase;
+    }
+
+    &__text{
+		font-size: 32px;
+		line-height: 38px;
+		color: $mainColor;
+		text-transform: uppercase;
+    }
+
+	&__span{
+		color: $secondColor;
+   	}
+
+	/* animation tracking-in-contract-bck */
+	@keyframes text-pop-up-left {
+		0% {
+			transform: translateX(0);
+			transform-origin: 50% 50%;
+		}
+		100% {
+			transform: translateX(-50px);
+			transform-origin: 50% 50%;
+		}
+	}
+}
+
+.sales{
+	padding-top: 64px;
+	padding-bottom: 96px;
+    &__top{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__bottom{
+		margin-top: 30px;
+	}
+
+    &__item{
+		width: 30%;
+		height: 250px;
+      	position: relative;
+		&_big{
+			width: 100%;
+			height: 180px;
+		}
+    }
+
+    &__description{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+    }
+
+    &__text{
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $defaultColor;
+    }
+
+    &__heading{
+		color: $secondColor;
+		font-size: 24px;
+		line-height: 29px;
+		text-align: center;
+		text-transform: uppercase;
+    }
+}
+
+.product{
+	padding-bottom: 96px;
+	&_page{
+		margin-top: 64px;
+	}
+    &__heading{
+		font-size: 30px;
+		line-height: 36px;
+		text-align: center;
+		color: $mainColor;
+    }
+
+    &__info{
+		margin-top: 8px;
+		font-size: 14px;
+		line-height: 17px;
+		color: $productTextColor;
+		text-align: center;
+    }
+
+    &__box{
+		margin-top: 48px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		row-gap: 32px;
+    }
+
+    &__items{
+      	width: 360px;
+      	background: $productItemsBg;
+      	position: relative;
+		transition: 0.8s;
+		&:hover{
+			transition: 0.8s;
+			transform: scale(1.05);
+			box-shadow: 8px 8px 8px 8px $mainShadow;
+			background: $productItemsHoverBg;	
+		}
+		&:hover .product__img{
+			filter: brightness(25%);
+    	}
+
+		&:hover .product__button{
+			align-items: center;
+			display: flex;
+			border: 1px solid $defaultBorder;
+			box-shadow: 0 0 5px $defaultShadow;
+			animation: slide-in-fwd-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+		}
+
+	}	
+
+	&__img{
+		height: 450px;
+	}
+
+    &__button{
+		position: absolute;
+		top: 188px;
+		left: 112px;
+		right: 112px;
+		display: none;
+		border: 1px solid $defaultBorder;
+		box-shadow: 1px 1px 1px 1px $defaultShadow;	
+		background: $secondColor;
+		font-weight: 700;
+		&:hover {
+			align-items: center;
+			display: flex;
+			transition: 0.8s;
+		}
+    }
+
+    &__button__img{
+		padding-right: 5px;
+		position: relative;
+		top: 0px;
+		fill: $defaultColor;
+    }
+ 
+    &__addtocard__link{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 40px;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 17px;
+		color: $defaultColor;
+    }
+ 
+    &__descriptions{
+		padding: 25px 16px;
+    }
+
+    &__link__heading{
+		display: inline-block;
+		font-size: 16px;
+		line-height: 16px;
+		color: $mainColor;
+		text-transform: uppercase;
+		font-weight: 700;
+		transition: 0.8s;
+		&:hover {
+			transition: 0.8s;
+			transform: scale(1.1);
+			margin-left: 5px;
+			color: $productHeadingColor;
+		}
+    }
+
+    &__text{
+		margin-top: 12px;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		color: $mainColor;
+		transition: 0.8s;
+		&:hover{
+			font-weight: 700;
+			transition: 0.8s;
+			transform: scale(1.1);
+			margin-left: 15px;
+			color: $productTextSecondColor;
+		}
+    }
+
+    &__price{
+		display: inline-block;
+		margin-top: 18px;
+		font-size: 16px;
+		line-height: 19px;
+		color: $mainColor;
+		transition: 0.8s;
+		&:hover{
+			transition: 0.8s;
+			transform: scale(1.2);
+			font-weight: 700;
+			color: $thirdColor;
+		}
+    }
+
+    &__block__button{
+		width: 212px;
+		border: 1px solid #F26376;
+		display: flex;
+		margin: 48px auto 0;
+		&:hover .product__button__link{
+			background: $secondBg;
+			color: $defaultColor;
+			transform: scale(1.2);
+			transition: 0.8s;
+		}
+    }
+
+    &__button__link{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+		line-height: 19px;
+		color: $secondColor;
+		text-align: center;
+		padding: 15px 5px;
+		transition: 0.8s;
+	}	
+
+	/* animation slide-in-fwd-top */
+	@keyframes slide-in-fwd-top {
+		0% {
+			transform: translateZ(-1400px) translateY(-800px);
+			opacity: 0;
+		}
+		100% {
+			transform: translateZ(0) translateY(0);
+			opacity: 1;
+		}
+	}
+
+}     
+
+.feature{
+	background: $mainBg;
+	min-height: 340px;
+
+    &__content{
+		min-height: inherit;
+		display: flex;
+		justify-content: space-between;
+    }
+
+    &__items{
+		width: 360px;
+		padding-top: 104px;
+		padding-bottom: 104px;
+    }
+
+    &__img{
+		margin: 0 auto;
+		width: 50px;
+		height: 40px;
+    }
+
+	&__icon{
+		object-fit: contain;
+	}
+
+    &__heading{
+		margin-top: 16px;
+		font-size: 19.96px;
+		line-height: 24px;
+		color: $defaultColor;
+		text-align: center;
+    }
+
+    &__text{
+		margin-top: 16px;
+		font-weight: 300;
+		font-size: 13.972px;
+		line-height: 17px;
+		text-align: center;
+		color: $defaultColor;
+    }
+}   
+
+.subscribe{
+	padding-top: 120px;
+	padding-bottom: 120px;
+	min-height: 448px;
+	background: url('img/recall-bg.jpg') no-repeat center/cover;
+	display: flex;
+	justify-content: space-between;
+
+    &__info{
+		width: 48%;
+    }
+
+    &__address{
+		width: 48%;
+		margin-top: 52px;
+    }
+
+	&__img{
+		margin: 0 auto;
+		width: 96px;
+		height: 96px;
+	}
+    
+    &__text{
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		color: $mainColor;
+		margin-top: 30px;
+    }
+
+    &__field{
+		padding-left: 22px;
+		padding-right: 22px;
+		background: $subscribeBg;
+		border-radius: 24px 0 0 24px;
+		height: 49px;
+		font-size: 14px;
+		line-height: 17px;
+		color: $mainColor;
+		opacity: 0.67;
+    }
+
+    &__heading{
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 167.2%;
+		text-align: center;
+		text-transform: uppercase;
+		color: $mainColor;
+    }
+
+    &__text_form{
+		margin-top: 10px;
+		font-size: 18px;
+		line-height: 30px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $mainColor;
+    }
+
+    &__form{
+		display: flex;
+		justify-content: center;
+		margin-top: 32px;
+    }
+
+    &__button{
+		width: 100px;
+		background: $secondColor;
+		height: 49px;
+		border-radius: 0 24px 24px 0;
+		font-size: 14px;
+		line-height: 17px;
+		text-align: center;
+		color: $defaultColor;
+    }
+
+    &__button:hover{
+      	background: $btnHover;
+    }
+
+}
+
+.footer{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: $mainBg;
+	min-height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+  	&__copyright{
+		font-size: 16px;
+		line-height: 19px;
+		color: $defaultColor;
+    }
+
+  	&__right{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: 8px;
+  	}
+
+	&__link{
+		width: 32px;
+		height: 32px;
+	}
+
+	&__img{
+		width: inherit;
+		height: inherit;
+		padding: 8px;
+		background: $defaultBg;
+		&:hover{
+			fill: $defaultColor;
+			background: $secondBg;
+		}
+  	}
+
+}
+
+
+
+@import 'catalog';
+@import 'product';
+@import 'cart';
+@import 'registration';
+@import 'm768';
+@import 'm425';
