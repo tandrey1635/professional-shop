@@ -12,8 +12,8 @@
         &__popup{
             height: 375px;
         }
-    }    
-    
+    }
+
     .breadcrumbs{
         flex-direction: column;
         justify-content: space-evenly;
@@ -23,25 +23,25 @@
         min-height: 375px;
         display: flex;
         align-items: center;
-        
+
         &__content{
             margin-top: 0;
             margin-left: 25%
         }
-        
+
         &__img{
             display: none;
         }
-        
+
         &__descriptions{
             width: 100%;
         }
-        
+
         &__heading{
             font-size: 38px;
             line-height: 46px;
         }
-        
+
         &__text{
             font-size: 20px;
             line-height: 24px;
@@ -93,7 +93,7 @@
         &__sort__list{
             font-size: 13px;
         }
-        
+
     }
 
     .product{
@@ -148,7 +148,7 @@
         &__right{
             width: 100%;
         }
- 
+
     }
 
     .info{
@@ -159,17 +159,16 @@
             width: 100%;
         }
     }
-    
+
     .subscribe{
         &__info, &__address{
             width: 100%;
         }
-    }    
+    }
 
     .footer{
         flex-direction: column-reverse;
         justify-content: space-around;
         min-height: 150px;
     }
-
 }

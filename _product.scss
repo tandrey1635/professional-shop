@@ -1,7 +1,7 @@
-.slider {
+.slider{
 	position: relative;
 	background: $productPromoBg;
-	&__wrapper {
+	&__wrapper{
 		height: 800px;
 		animation: rotate-vert-center 5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 	}
@@ -47,17 +47,18 @@
 	}
 
 	/* animation rotate-vert-center */
-	@keyframes rotate-vert-center {
-		0% {
+	@keyframes rotate-vert-center{
+		0%{
 			transform: rotateY(0);
 		}
-		100% {
+
+		100%{
 			transform: rotateY(360deg);
 		}
 	}
 }
 
-.merchendise {
+.merchendise{
 	padding-bottom: 96px;
 	&__box {
 		padding: 64px 15px;
@@ -67,13 +68,13 @@
 		box-shadow: 0 0 10px  $mainShadow;
 	}
 
-	&__descriptions {
+	&__descriptions{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 
-	&__header {
+	&__header{
 		font-weight: 300;
 		font-size: 14px;
 		line-height: 17px;
@@ -81,13 +82,13 @@
 		text-transform: uppercase;
 	}
 
-	&__hr {
+	&__hr{
 		margin: 12px 0;
 		width: 64px;
 		border: 3px solid $secondBorder;
 	}
 
-	&__heading {
+	&__heading{
 		font-weight: 300;
 		font-size: 18px;
 		line-height: 22px;
@@ -95,7 +96,7 @@
 		text-transform: uppercase;
 	}
 
-	&__text {
+	&__text{
 		width: 555px;
 		margin-top: 48px;
 		font-weight: 300;
@@ -105,7 +106,7 @@
 		color: $mainColor;
 	}
 
-	&__price {
+	&__price{
 		margin-top: 32px;
 		font-weight: 300;
 		font-size: 24px;
@@ -113,13 +114,13 @@
 		color: $secondColor;
 	}
 
-	&__hr_low {
+	&__hr_low{
 		width: 640px;
 		margin: 64px 0;
 		border: 1px solid $hrBorder;
 	}
 
-	&__sort {
+	&__sort{
 		display: flex;
 		justify-content: center;
 		&__menu{
@@ -127,20 +128,21 @@
 			justify-content: center;
 			gap: 28px;
 		}
-		&__list {
+
+		&__list{
 			font-size: 14px;
 			line-height: 17px;
 			color: $mainColor;
 			text-transform: uppercase;
 			cursor: pointer;
-			&::after {
+			&::after{
 				content: url('img/product/arrow.svg');
 				margin-left: 10px;
 			}
-		}	
-	}	
+		}
+	}
 
-	&__block__button {
+	&__block__button{
 		width: 212px;
 		margin: 48px auto 0;
 		border: 1px solid $secondBorder;
@@ -148,7 +150,7 @@
 		justify-content: center;
 	}
 
-	&__button {
+	&__button{
 		padding: 15px 5px;
 		padding-left: 20px;
 		position: relative;
@@ -167,16 +169,16 @@
 			left: 25px;
 			fill: $secondColor;
 		}
-		&:hover {
+		
+		&:hover{
 			transition: 0.8s;
 			transform: scale(1.2);
 			background: $secondBg;
 			color: $defaultColor
 		}
 
-		&:hover .merchendise__button__img {
+		&:hover .merchendise__button__img{
 			fill: $defaultColor;
 		}
 	}
-
 }

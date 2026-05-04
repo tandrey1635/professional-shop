@@ -160,7 +160,6 @@ button {
   display: flex;
   padding-left: calc(50% - 800px);
   padding-right: calc(50% - 800px);
-  /* animation tracking-in-contract-bck */
 }
 .promo__img {
   width: 50%;
@@ -190,6 +189,9 @@ button {
 }
 .promo__span {
   color: #f16d7f;
+}
+.promo {
+  /* animation tracking-in-contract-bck */
 }
 @keyframes text-pop-up-left {
   0% {
@@ -250,7 +252,6 @@ button {
 
 .product {
   padding-bottom: 96px;
-  /* animation slide-in-fwd-top */
 }
 .product_page {
   margin-top: 64px;
@@ -382,7 +383,7 @@ button {
 }
 .product__block__button {
   width: 212px;
-  border: 1px solid #F26376;
+  border: 1px solid #f26376;
   display: flex;
   margin: 48px auto 0;
 }
@@ -402,6 +403,9 @@ button {
   text-align: center;
   padding: 15px 5px;
   transition: 0.8s;
+}
+.product {
+  /* animation slide-in-fwd-top */
 }
 @keyframes slide-in-fwd-top {
   0% {
@@ -767,7 +771,6 @@ button {
 .slider {
   position: relative;
   background: #f7f7f7;
-  /* animation rotate-vert-center */
 }
 .slider__wrapper {
   height: 800px;
@@ -804,6 +807,9 @@ button {
 .slider__navigations__prev__img:hover, .slider__navigations__next__img:hover {
   fill: #f16d7f;
   cursor: pointer;
+}
+.slider {
+  /* animation rotate-vert-center */
 }
 @keyframes rotate-vert-center {
   0% {

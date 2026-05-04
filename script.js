@@ -3,7 +3,6 @@ const closeBtn = document.querySelector('.header__popup__close')
 const popup = document.querySelector('.header__popup')
 
 
-
 btnMenu.addEventListener('click', ()=>{
 	popup.classList.toggle('header__popup__active')
 })
